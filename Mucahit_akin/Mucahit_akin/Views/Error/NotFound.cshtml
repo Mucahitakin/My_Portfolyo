@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "404 Sayfa Bulunamadı";
+    Layout = "~/Shared/_Layout.cshtml";
+}
+@{
+    string resim ="https://i.pinimg.com/originals/0a/a4/1c/0aa41caab25771e50959204bbf094143.gif";
+    string title = "Bu Sayfayı Isınmak İçin Yaktık...";
+}
+
+<div class="img" style="margin-left:21%;margin-top:50px;">
+    <h1 style="color:#e9a250;margin-left:180px;">@title</h1>
+    <img src="@resim" style="height:600px;width:800px;"/>
+</div>
+<style>
+
+    body{
+        background-color:#2c072d;
+    }
+
+</style>

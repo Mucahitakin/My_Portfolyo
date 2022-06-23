@@ -1,0 +1,165 @@
+﻿@model IEnumerable<Mucahit_akin.Model.Anasayfa>
+@{
+    ViewData["Title"] = "Anasayfa";  
+    Layout = "~/Shared/_Layout.cshtml";
+
+    string r1 = "https://kurtuluskara.com/wp-content/uploads/2017/04/Web-Tasarimci-Nasil-Olunur.jpg";
+    string r2 = "https://www.cagdasyazilim.com/images/slider/d41d8cd98f00b204e9800998ecf8427e1.jpg";
+    string r3 = "https://www.cagdasyazilim.com/images/slider/d41d8cd98f00b204e9800998ecf8427e2.jpg";
+    string txt = "Mücahit Akın";
+}
+@{
+    <div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src=@r1 style="width:100%;height:415px;">
+  <div class="text">@txt</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src=@r2 style="width:100%;height:415px;">
+  <div class="text">@txt</div    >
+</div>
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src=@r3 style="width:100%;height:415px;">
+  <div class="text">@txt</div>
+</div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+<style>
+.slideshow-container {
+  max-width: 96%;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+</style>
+<script> 
+var slideIndex = 0; 
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000);
+}
+</script>
+
+
+
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////;
+    
+    <div class="container" style="width:100%;height:270px;margin-left:0px;margin-top:100px;">
+    <h1 style="margin-left:30%;">Projelerde Kullandığım Uygulama ve diller</h1>
+        <div class="project-name">
+            @{
+                foreach (var item in Model)
+                {
+
+                    if (item.id <= 5)
+                    {                 
+                       
+                        <img src="@item.url" style="height:200px;width:200px;margin-left:65px;border-radius:50%;" />
+                    }
+
+                  
+               
+            }
+
+}
+        </div>
+    </div>
+    <div class="container" style="width:100%;height:200px;margin-left:0px;margin-top:30px;">
+        <div class="project-name">
+            @{
+                foreach (var item in Model)
+                {
+
+                    if (item.id >= 6)
+                    {                 
+                       
+                        <img src="@item.url" style="height:200px;width:200px;margin-left:65px;border-radius:50%;" />
+                    }
+
+                  
+               
+            }
+
+}
+        </div>
+    </div>
+}
+
+

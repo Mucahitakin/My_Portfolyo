@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body style="margin:0;padding:0;">  
+    <div>
+        <nav class="navbar">
+            <ul style="background-color:#f1f3f3;width:100%;height:10vh;" >
+                <li style="list-style-type:none;float:left;margin-left:40%;margin-top:30px;"><a style="text-decoration:none;" href="~/Anasayfa/baslangic">Anasayfa</a></li>
+                <li style="list-style-type:none;float:left;margin-left:25px;margin-top:30px;"><a style="text-decoration:none;" href="~/Hakkimda/HakSayfam">Hakkimda</a></li>
+                <li style="list-style-type:none;float:left;margin-left:25px;margin-top:30px;"><a style="text-decoration:none;" href="~/Iletisim/Gorusme">İletişim</a></li>
+            </ul>
+        </nav>
+       
+        @RenderBody()
+    </div>
+</body>
+</html>
+<style>
+       .navbar{
+    height:10vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content:space-around;
+}
+a{
+    color:#8420b3;
+    font-size:18px;
+}
+a:hover{
+    color:#b329f3;
+    
+    
+}
+
+
+</style>

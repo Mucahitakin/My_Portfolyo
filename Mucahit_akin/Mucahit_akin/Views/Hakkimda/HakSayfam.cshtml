@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Hakkimda";
+    Layout = "~/Shared/_Layout.cshtml";
+    string selam="Merhaba Ben,";
+    string isim = "Mücahit";
+    string aciklama = "Yazılım geliştirme projelerinde mobil,web,OOP geliştien çok yönlü bir yazılım geliştiricisiyim.";
+    string hakkimda = "Lise'de Veri tabanı bitirdi.Sonrasında Üniversite'de mobil uygulama yapmaya başladı.Üniversite son sınıfta ise web alanında kendini geliştirmeye çalıştı.Şuan freelancer olarak uygulama geliştiriyor.Kendisini geliştirmek için yabancı kaynaklardan faydalanıyor.";
+    string titleHakkimda = "Benim Hakkımda";
+}
+
+
+
+<div class="main-container" style="width:900px;height:600px;margin-left:20%;margin-top:75px;">
+    <div class="main-left" style="width:400px;height:600px;float:left;background-color:black;">
+        <div class="main-top" style="width:200px;height:175px;margin-left:24%;margin-top:70px;border-radius:50%;">
+            <img src="~/lib/Image/hakkimda.png" style="border-radius:50%;height:175px;width:200px;margin-top:0px;"  />
+        </div>
+        <div class="main-bottom" style="width:400px;height:300px;background-color:black;">
+            <h1 style="margin-left:25%;font-family:Arial;color:white">@selam</h1>
+            <h1 style="margin-left:33%;font-family:Arial;color:white">@isim</h1>
+            <h1 style="margin-top:30px;margin-left:15%;margin-right:15%;font-size:14px;;color:white">@aciklama</h1>
+           <a class="linkedin"href="https://www.linkedin.com/in/mücahit-akın-573205219/"><img src="~/lib/Image/linkedin_vector.png" style="height:30px;width:30px;margin-top:70px;margin-left:20%;float:left;" /></a>
+           <a class="spotify" href="https://www.spotify.com/tr/"><img src="~/lib/Image/spotify_vector.png" style="height:30px;width:30px;margin-top:70px;margin-left:10%;float:left;"/></a>
+           <a class="twitter" href="https://twitter.com/Akin__mucahit"><img src="~/lib/Image/twitter_vector.png" style="height:30px;width:30px;margin-top:70px;margin-left:10%;float:left;" /></a>
+           <a class="youtube" href="https://www.youtube.com"><img src="~/lib/Image/youtubee_vector.png" style="height:30px;width:30px;margin-top:70px;margin-left:10%;float:left;" /></a>
+        </div>
+    </div>
+<div class="main-right" style="width:500px;height:600px;float:left;background-color:#b5393d;">
+    <h1 style="margin-left:30%;margin-right:30%;font-size:34px;margin-top:70px;">@titleHakkimda</h1>
+    <h6 style="margin-left:20%;margin-right:20%;font-size:14px;margin-top:170px;font-family:'Bodoni MT'">@hakkimda</h6>
+</div>
+    
+</div>
+
+<style>
+body{
+    background-image:url("https://steamuserimages-a.akamaihd.net/ugc/844839649413163055/0B4DA71EEB65EE1F4FD1BCA07242949B9B63FF67/");
+    background-size:cover; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat:no-repeat;
+}
+</style>
+

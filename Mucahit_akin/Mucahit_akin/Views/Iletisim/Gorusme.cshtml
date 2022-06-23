@@ -1,0 +1,71 @@
+﻿@model Mucahit_akin.Model.Gorusme
+@addTagHelper*,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Gorusme";
+    Layout = "~/Shared/_Layout.cshtml";
+}
+<style>
+
+    
+    
+    
+
+</style>
+
+
+
+
+
+@using(Html.BeginForm("Gorusme"))
+{  
+ <div style="width:100%;height:700px;background-color:white;">
+   <div style="width:50%;height:700px;background-color:white;float:left;">
+    <table style="margin-left:220px;margin-top:170px;width:300px;height:320px;">
+        <tr>
+            <td>
+                İsminiz : 
+            </td>
+            <td>
+                <input type="text"  style="border-radius:0px 10px 0px 10px;color:white;border:0px;background-color:black;height:30px" asp-for="isim"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Soyisminiz :
+            </td>
+            <td>
+                <input type="text"  style="border-radius:0px 10px 0px 10px;color:white;border:0px;background-color:black;height:30px" asp-for="soyisim"/>
+            </td>           
+        </tr>
+        <tr>
+            <td>
+                Email : 
+            </td>
+            <td>
+                <input type="text" style="border-radius:0px 10px 0px 10px;color:white;border:0px;background-color:black;height:30px" asp-for="e_mail"/>
+            </td>
+       
+        <tr>
+        <td>
+
+        </td>
+            <td>
+                <input type="submit" value="Gönder" style="width:175px;height:50px;border-radius:10px 0px 10px 0px;border:0px;background-color:black;color:white;"/>
+            </td>
+        </tr>
+    </table>
+        <h1 style="margin-left:220px;font-size:15px;margin-top:20px;background-color:white;">@TempData["sonuc"]</h1>
+
+    </div>
+
+    <div style="width:50%;height:600px;background-color:white;float:left;">
+         <img src="~/lib/Image/bg.png" style="width:580px;height:580px;margin-left:50px;margin-top:50px;"><br>
+         <a class="linkedin" href="https://www.linkedin.com/in/mücahit-akın-573205219/"><img src="~/lib/Image/linkedin_vector.png" style="height:50px;width:50px;margin-left:160px;margin-top:5px;"/></a>
+         <a class="youtube" href="https://www.youtube.com"><img src="~/lib/Image/youtube_vector.png" style="height:50px;width:50px;margin-left:50px;margin-top:5px;"/></a>
+        <a class="twitter" href="https://twitter.com/Akin__mucahit"><img src="~/lib/Image/twitter_vector.png" style="height:50px;width:50px;margin-left:50px;margin-top:5px;"/></a>
+        <a class="spotify" href="https://www.spotify.com/tr/"><img src="~/lib/Image/spotify_vector.png" style="height:50px;width:50px;margin-left:50px;margin-top:5px;"/></a> 
+    </div>
+</div>
+}
+
